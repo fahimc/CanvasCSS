@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>canvascss</title>
+		<meta name="author" content="Fahim Chowdhury" />
+		<!-- Date: 2014-01-29 -->
+		<script type="text/javascript" src="src/all.min.js"></script>
+		<script type="text/javascript" src="src/CanvasManager.js"></script>
+		<script type="text/javascript" src="src/css.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/canvas.css" />
+		<script type="text/javascript">
+			function init() {
+				CanvasManager.create();
+				// create a rectangle with angle=45
+				var rect = new fabric.Rect({
+					left : 100,
+					top : 100,
+					width : 100,
+					height : 100,
+					selectable:false
+				});
+CanvasManager.add(rect,'box');
+				
+				CanvasManager.setStyle('box',"top","100px");
+console.log(CanvasManager.getElementById('box'));
+			}
+		</script>
+	</head>
+	<body onload="init()">
+<canvas width="500" height="500" id="c"></canvas>
+	</body>
+</html>
+
